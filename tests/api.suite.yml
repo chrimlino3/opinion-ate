@@ -1,4 +1,7 @@
 actor: ApiTester
 modules:
     enabled:
-        - \Helper\Api
+        - REST:
+            url: http://opinion-ate/api/v1/
+            depends: PhpBrowser
+            part: Json
