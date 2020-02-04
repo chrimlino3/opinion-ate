@@ -9,8 +9,6 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 
 class RestaurantTest extends TestCase
 {
-    use WithoutMiddleware;
-    use RefreshDatabase;
     /**
      * A basic feature test example.
      *
@@ -18,14 +16,14 @@ class RestaurantTest extends TestCase
      */
     public function testGetRestaurant()
     {
-        $response = $this->json('GET', '/api/v1/restaurants'); //json method returns a response from the API
+        $response = $this->Response::json('GET', '/api/v1/restaurants'); //json method returns a response from the API
 
         $response->assertStatus(200);
     }
 
     public function testPostRestaurant()
     {
-        $response = $this->withHeaders([
+        $response = $this->Response::withHeaders([
             'Current-Type '=> 'application/vnd.api+json'
         ])->json('POST', '/restaurant', ['name' => 'Food Place']);
 
