@@ -10,6 +10,6 @@ class Restaurant extends Model
 
     public function dishes()
     {
-        return $this->hasMany(Restaurant::class, 'restaurant_id');
+        return $this->hasMany('App\Dish');
     }
 }
