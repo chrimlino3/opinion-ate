@@ -12,4 +12,10 @@ class Dish extends Model
     {
         return $this->belongsTo('App\Restaurant');
     }
+
+    public function ingredient() 
+    {
+        return $this->belongsToMany('App\Ingredient');
+    }
 }
+
