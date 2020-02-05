@@ -17,8 +17,13 @@ class CreateDishesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->integer('rating');
-            $table->bigInteger('restaurant_id');
+            $table->unsignedBigInteger('restaurant_id');
             $table->timestamps();
+
+            $table->foreign('restaurant_id')
+            ->references('id')
+            ->on('restaurants')
+            ->onDelete('cascade');     // if a restaurant is being deleted then the dish is deleted also. Declare a foreign key costraint without sQL
         });
     }
 
