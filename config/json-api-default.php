@@ -55,6 +55,7 @@ return [
     'resources' => [
         'restaurants' => \App\Restaurant::class,
         'dishes' => \App\Dish::class,
+        'ingredients' => \App\Ingredient::class
     ],
 
     /*

@@ -93,7 +93,11 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
+                    
                 </div>
+                <!-- <p>@foreach ($dish->ingredients as $ingredient)
+                <a href=#>{{$ingredient->name}}</a>
+                endforeach -->
             </div>
         </div>
     </body>

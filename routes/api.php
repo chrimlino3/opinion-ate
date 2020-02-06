@@ -30,6 +30,6 @@ JsonApi::register('default')->routes(function ($api) {
         $relations->hasMany('ingredients');
     });
     $api->resource('ingredients')->relationships(function ($relations) {
-        $relations->hasMany('dishes')->only('related', 'read');
+        $relations->hasMany('dishes');
     });
 });
